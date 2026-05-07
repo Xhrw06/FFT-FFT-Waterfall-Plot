@@ -1,0 +1,36 @@
+# Python cache and test artifacts
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Local virtual environments
+.venv/
+venv/
+env/
+
+# Build and packaging output
+build/
+build_single/
+dist/
+dist_single/
+release/
+*.spec
+!throttle_firewater_waterfall/packaging/*.spec
+
+# Runtime logs and generated data
+*.log
+raw_firewater.log
+samples.csv
+*.npz
+channel_mapping_profile.yaml
+session_config.yaml
+
+# Local editor and OS metadata
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
