@@ -1,0 +1,1 @@
+"""FireWater protocol support."""
