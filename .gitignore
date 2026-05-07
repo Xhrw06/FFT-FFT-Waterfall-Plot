@@ -12,12 +12,9 @@ htmlcov/
 venv/
 env/
 
-# Build and packaging output
-build/
+# Local one-file packaging output
 build_single/
-dist/
 dist_single/
-release/
 *.spec
 !throttle_firewater_waterfall/packaging/*.spec
 
