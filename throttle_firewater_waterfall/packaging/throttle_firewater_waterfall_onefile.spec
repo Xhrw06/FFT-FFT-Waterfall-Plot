@@ -3,7 +3,7 @@
 from pathlib import Path
 
 
-ROOT = Path(SPECPATH).resolve().parents[1]
+ROOT = Path(SPECPATH).resolve().parent
 
 
 a = Analysis(
@@ -11,7 +11,12 @@ a = Analysis(
     pathex=[str(ROOT)],
     binaries=[],
     datas=[(str(ROOT / "config" / "default.yaml"), "config")],
-    hiddenimports=[],
+    hiddenimports=[
+        "PySide6.QtOpenGL",
+        "PySide6.QtOpenGLWidgets",
+        "PySide6.QtSvg",
+        "PySide6.QtNetwork",
+    ],
     hookspath=[],
     hooksconfig={},
     runtime_hooks=[],
@@ -23,11 +28,7 @@ a = Analysis(
         "matplotlib",
         "pandas",
         "OpenGL",
-        "PySide6.QtOpenGL",
-        "PySide6.QtOpenGLWidgets",
-        "PySide6.QtSvg",
         "PySide6.QtTest",
-        "PySide6.QtNetwork",
     ],
     noarchive=False,
     optimize=0,
